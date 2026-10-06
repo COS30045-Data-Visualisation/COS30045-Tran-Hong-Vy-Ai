@@ -168,6 +168,8 @@ nav {
 .hero-cta {
     flex-shrink: 0;
 
+    padding-bottom: 10px;
+
     transform: translateY(80px);
 
 }
@@ -376,7 +378,7 @@ nav {
 
     color: white;
 
-    font-size: 19px;
+    font-size: 16px;
 
     line-height: 1.6;
 }
@@ -651,7 +653,7 @@ footer p {
 ========================= */
 
 .section-heading {
-    max-width: 1100px;
+    max-width: 750px;
 }
 
 .section-label {
@@ -663,7 +665,6 @@ footer p {
 }
 
 .section-heading h2 {
-    max-width: 1100px;
     margin: 0 0 20px;
     color: #4c572b;
     font-size: 36px;
@@ -671,7 +672,6 @@ footer p {
 }
 
 .section-heading p {
-    max-width: 1100px;
     margin: 0;
     color: #555;
     font-size: 16px;
@@ -722,140 +722,29 @@ footer p {
 
 
 /* =========================
-   DATA STORY TRANSITION
-========================= */
-
-.story-transition {
-    margin-bottom: 90px;
-    padding: 65px 0;
-    border-top: 6px solid #4c572b;
-}
-
-.story-transition .section-heading {
-    max-width: 1100px;
-}
-
-.story-transition .section-heading h2 {
-    max-width: 1100px;
-    color: #4c572b;
-}
-
-.story-transition .section-label {
-    color: #b18b3c;
-}
-
-.story-transition .section-heading p {
-    max-width: 1100px;
-    color: #555;
-}
-
-.story-transition .section-heading p + p {
-    margin-top: 15px;
-}
-
-
-/* =========================
-   TECHNOLOGY STORY
-========================= */
-
-.technology-story {
-    margin-bottom: 90px;
-}
-
-.technology-story .section-heading {
-    max-width: 1100px;
-}
-
-.technology-story .section-heading h2 {
-    max-width: 1100px;
-    color: #4c572b;
-}
-
-.technology-story .section-label {
-    color: #b18b3c;
-}
-
-.technology-story .section-heading p {
-    max-width: 1100px;
-    color: #555;
-}
-
-
-/* =========================
-   TECHNOLOGY CHART
-========================= */
-
-.technology-chart {
-    width: 100%;
-    min-height: 365px;
-    margin-top: 40px;
-    padding: 40px;
-    background-color: white;
-}
-
-.technology-chart img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-/* =========================
-   TECHNOLOGY TAKEAWAY
-========================= */
-
-.technology-takeaway {
-    max-width: 1100px;
-    margin: 35px 0 0;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.technology-takeaway strong {
-    color: #4c572b;
-}
-
-.television-data .technology-takeaway {
-    color: white;
-}
-
-
-/* =========================
-   SEE THE FULL PICTURE
+   TELEVISION DATA
 ========================= */
 
 .television-data {
-    margin: 0 -8% 50px;
-    padding: 80px 8%;
+    margin: 0 -8%;
+    padding: 70px 8%;
     background-color: #4c572b;
 }
 
 .television-data .section-heading {
-    max-width: 1100px;
-}
-
-.television-data .section-heading h2 {
-    max-width: 1100px;
-    color: white;
-}
-
-.television-data .section-heading p {
-    max-width: 1100px;
-    color: white;
+    max-width: 750px;
 }
 
 .television-data .section-label {
     color: #ffd24c;
 }
 
+.television-data .section-heading h2 {
+    color: white;
+}
 
-/* =========================
-   TOTAL DATA CHART
-========================= */
-
-.television-data .technology-chart {
-    margin-top: 45px;
+.television-data .section-heading p {
+    color: white;
 }
 
 
@@ -917,53 +806,11 @@ footer p {
 
 
 /* =========================
-   BUYER TAKEAWAY
-========================= */
-
-.buyer-takeaway {
-    margin-bottom: 90px;
-}
-
-.buyer-takeaway .section-heading {
-    max-width: 1100px;
-}
-
-.buyer-takeaway .section-heading h2 {
-    max-width: 1100px;
-}
-
-
-/* =========================
-   FINAL STORY
-========================= */
-
-.final-story {
-    margin-bottom: 90px;
-}
-
-.final-story .section-heading {
-    max-width: 1100px;
-}
-
-.final-story .section-heading h2 {
-    max-width: 1100px;
-}
-
-
-/* =========================
    ENERGY TIPS
 ========================= */
 
 .energy-tips {
-    padding-top: 20px;
-}
-
-.energy-tips .section-heading {
-    max-width: 1100px;
-}
-
-.energy-tips .section-heading h2 {
-    max-width: 1100px;
+    padding-top: 80px;
 }
 
 .tips-grid {
