@@ -51,8 +51,3 @@ All generated suggestions and code were reviewed, tested, and adapted by the aut
 
 Tran Hong Vy Ai  
 COS30045 Data Visualisation — Swinburne University of Technology
-
-## Author
-
-Tran Hong Vy Ai  
-COS30045 Data Visualisation — Swinburne University of Technology 
