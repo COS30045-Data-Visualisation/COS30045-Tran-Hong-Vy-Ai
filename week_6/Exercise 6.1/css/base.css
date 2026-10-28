@@ -1,0 +1,34 @@
+/* General page layout and text styles */
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: #222;
+background: #fff;
+}
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 16px;
+}
+/* Headings */
+h1 {
+margin: 8px 0 4px;
+}
+h2 {
+font-size: 18px;
+margin: 28px 0 4px;
+}
+
+/* Introductory text and source information */
+.intro,
+.note,
+.source {
+color: #555;
+}
+.note {
+margin: 0 0 8px;
+}
+.source {
+font-size: 13px;
+margin-top: 24px;
+}

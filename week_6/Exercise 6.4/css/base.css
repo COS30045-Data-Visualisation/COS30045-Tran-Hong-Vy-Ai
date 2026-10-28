@@ -1,0 +1,54 @@
+/* General page layout and text styles */
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: #222;
+background: #fff;
+}
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 16px;
+}
+/* Headings */
+h1 {
+margin: 8px 0 4px;
+}
+h2 {
+font-size: 18px;
+margin: 28px 0 4px;
+}
+
+/* Introductory text and source information */
+.intro,
+.note,
+.source {
+color: #555;
+}
+.note {
+margin: 0 0 8px;
+}
+.source {
+font-size: 13px;
+margin-top: 24px;
+}
+#filters_screen {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+#filters_screen button {
+  padding: 6px 16px;
+  border: 1px solid steelblue;
+  background: white;
+  color: steelblue;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#filters_screen button.active {
+  background: steelblue;
+  color: white;
+}

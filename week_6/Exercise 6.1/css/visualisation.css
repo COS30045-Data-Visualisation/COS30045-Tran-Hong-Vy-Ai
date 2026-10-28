@@ -1,0 +1,27 @@
+/* Responsive SVG container */
+.responsive-svg-container {
+    width: 100%;
+    max-width: 1000px;
+}
+.responsive-svg-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Axes and axis labels */
+.axis-x text,
+.axis-y text {
+    font-size: 14px;
+    fill: #555;
+}
+.axis-x path,
+.axis-y path,
+.axis-x line,
+.axis-y line {
+    stroke: #b9b2a4;
+}
+.axis-label {
+    font-size: 15px;
+    fill: #555;
+}

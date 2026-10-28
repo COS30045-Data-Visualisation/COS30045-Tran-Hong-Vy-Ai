@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercise  6.3: TV Energy Consumption Histogram and Scatterplot </title>
+
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visualisation.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>TV Energy Consumption</h1>
+
+        <p class="intro">
+            Explore the distribution of energy consumption across TV models
+            in the January 2026 dataset.
+        </p>
+
+        <h2>How is TV energy consumption distributed?</h2>
+
+        <p class="note">
+            Exercise 6.2: Histogram showing the frequency of TV models across
+            different energy consumption ranges. Use the buttons to filter by screen type
+        </p>
+
+        <div class="responsive-svg-container">
+            <div id="filters_screen"></div>
+            <div id="histogram"></div>
+        </div>
+
+        <h2>Do TVs with more stars use less energy?</h2>
+
+        <p class="note">
+            Exercise 6.3: Scatterplot of star rating against energy consumption.
+            Each dot is one TV model, coloured by screen type.
+        </p>
+
+        <div id="scatterplot" class="responsive-svg-container"></div>
+
+        <p class="source">
+            Source: Ex6_TVdata_withStar.csv, the cleaned TV dataset containing
+            brand, model, screen size, screen technology, star rating and
+            energy consumption.
+        </p>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/load-data.js"></script>
+    <script src="js/shared-constants.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/scatterplot.js"></script>
+</body>
+</html>
