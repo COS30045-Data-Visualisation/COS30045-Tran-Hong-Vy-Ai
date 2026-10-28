@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.2: bar chart and line chart</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Exercise 5.2: bar chart and line chart</h1>
+    <p class="intro">TV energy use and electricity prices, drawn with D3.</p>
+
+    <h2>LCD LED TVs use the most energy, LCD TVs the least</h2>
+    <p class="note">5.1 Vertical bar chart: average energy use of 55-inch TV models, by screen technology.</p>
+    <div class="responsive-svg-container">
+      <div id="bar-chart"></div>
+    </div>
+
+    <h2>Wholesale electricity prices more than tripled from 1998 to 2022</h2>
+    <p class="note">5.2 Line chart with points: average spot price in Queensland, New South Wales, Victoria and South Australia, one point per year.</p>
+    <div class="responsive-svg-container">
+      <div id="line-chart"></div>
+    </div>
+
+    <p class="source">TV data: tvScreenTypeEnergy.csv, the average yearly energy use (kWh) of 55-inch TV models for each screen technology, prepared in KNIME from the cleaned Energy Rating data.</p>
+    <p class="source">Prices: ARE_Spot_Prices.csv, the class file of yearly average wholesale electricity spot prices in $ per megawatt hour, 1998 to 2024.</p>
+  </div>
+
+  <!-- D3 first, then the data fallback and shared constants, then one file per chart, then the loader (order matters) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/bar-chart.js"></script>
+  <script src="js/line-chart.js"></script>
+  <script src="js/load-data.js"></script>
+</body>
+</html>

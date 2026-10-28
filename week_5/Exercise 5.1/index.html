@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.1: vertical bar chart with axes</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Exercise 5.1: vertical bar chart with axes</h1>
+    <p class="intro">TV energy use and electricity prices, drawn with D3.</p>
+
+    <h2>OLED and LED TVs use more energy than LCD TVs</h2>
+    <p class="note">5.1 Vertical bar chart: average energy use of the 4,508 TV models, by screen technology.</p>
+    <div class="responsive-svg-container">
+      <div id="bar-chart"></div>
+    </div>
+
+    <p class="source">TV data: tv_models.csv, the cleaned TV data used since Exercise 4: 4,508 TV models from the Energy Rating website, with brand, screen size, screen technology, energy use (kWh a year) and size group.</p>
+  </div>
+
+  <!-- D3 first, then the data fallback and shared constants, then one file per chart, then the loader (order matters) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/bar-chart.js"></script>
+  <script src="js/load-data.js"></script>
+</body>
+</html>
