@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4.1 - Draw SVGs</title>
+</head>
+
+<body>
+    <h1>My SVG House and Garden</h1>
+
+    <main>
+        <!-- Create the SVG canvas -->
+        <svg width="400" height="250">
+
+            <!-- 1. Background: sky and lawn -->
+            <rect x="0" y="0" width="400" height="250" fill="#D4F6FF" />
+            <rect x="0" y="160" width="400" height="90" fill="#34782B" />
+
+            <!-- 2. House: main body and roof -->
+            <rect
+                x="100" y="110"
+                width="160" height="120"
+                fill="#F4C27A"
+                stroke="#70452A"
+                stroke-width="2"
+            />
+
+            <!-- Chimney: draw before the roof -->
+            <rect
+                x="215" y="40"
+                width="15" height="40"
+                fill="#8B4A3A"
+                stroke="#70452A"
+                stroke-width="2"
+            />
+
+            <polygon
+                points="80,115 180,35 280,115"
+                fill="#C75B39"
+                stroke="#70452A"
+                stroke-width="2"
+            />
+
+            <!-- Smoke above the chimney -->
+            <polyline
+                points="222,35 230,25 222,15 230,5"
+                fill="none"
+                stroke="gray"
+                stroke-width="3"
+                stroke-linecap="round"
+            />
+
+            <!-- Front door -->
+            <rect
+                x="160" y="165"
+                width="40" height="65"
+                fill="#8B5E3C"
+                stroke="#70452A"
+                stroke-width="2"
+            />
+
+            <!-- House windows -->
+            <g
+                id="windows"
+                transform="translate(115, 140)"
+                fill="#A7DFF0"
+                stroke="#70452A"
+                stroke-width="2"
+            >
+                <!-- Window frames -->
+                <rect x="0" y="0" width="35" height="35" />
+                <rect x="95" y="0" width="35" height="35" />
+
+                <!-- Window dividers -->
+                <line x1="17.5" y1="0" x2="17.5" y2="35" />
+                <line x1="0" y1="17.5" x2="35" y2="17.5" />
+                <line x1="112.5" y1="0" x2="112.5" y2="35" />
+                <line x1="95" y1="17.5" x2="130" y2="17.5" />
+            </g>
+
+            <!-- 3. Tree -->
+            <rect
+                x="325" y="165"
+                width="12" height="65"
+                fill="#8B5E3C"
+                stroke="#70452A"
+                stroke-width="1.5"
+            />
+
+            <circle
+                cx="331" cy="145"
+                r="28"
+                fill="#70AD67"
+                stroke="#477D43"
+                stroke-width="1.5"
+            />
+
+            <!-- Bush -->
+            <ellipse
+                cx="120" cy="228"
+                rx="18" ry="10"
+                fill="#4C9A2A"
+            />
+
+            <!-- 4. Garden path -->
+            <path
+                d="M160,230
+                   L200,230
+                   C200,240 230,240 240,250
+                   L120,250
+                   C130,240 160,240 160,230 Z"
+                fill="#D9C4A1"
+                stroke="#A58B69"
+            />
+
+            <!-- 5. Sun -->
+            <circle
+                cx="60" cy="50"
+                r="25"
+                fill="yellow"
+                stroke="orange"
+                stroke-width="2"
+            />
+
+            <!-- 6. First cloud -->
+            <g fill="white" transform="translate(105, 35)">
+                <circle cx="0" cy="0" r="15" />
+                <circle cx="20" cy="-10" r="20" />
+                <circle cx="43" cy="0" r="15" />
+                <rect x="-7" y="-3" width="57" height="18" />
+            </g>
+
+            <!-- Second cloud -->
+            <g transform="translate(290, 55)" fill="#FFFFFF">
+                <circle cx="15" cy="10" r="12" />
+                <circle cx="35" cy="0" r="17" />
+                <circle cx="55" cy="10" r="12" />
+                <rect x="10" y="8" width="50" height="14" />
+            </g>
+
+            <!-- 7. Flower -->
+            <g transform="translate(60, 190)">
+
+                <!-- Stem -->
+                <rect
+                    x="-2" y="0"
+                    width="4" height="30"
+                    fill="#76C457"
+                />
+
+                <!-- Four petals -->
+                <circle cx="0" cy="-10" r="8" fill="pink" stroke="purple" />
+                <circle cx="10" cy="0" r="8" fill="pink" stroke="purple" />
+                <circle cx="0" cy="10" r="8" fill="pink" stroke="purple" />
+                <circle cx="-10" cy="0" r="8" fill="pink" stroke="purple" />
+
+                <!-- Flower centre -->
+                <circle
+                    cx="0" cy="0"
+                    r="6"
+                    fill="yellow"
+                    stroke="orange"
+                />
+            </g>
+
+            <!-- 8. Text label -->
+            <text
+                x="300" y="30"
+                font-size="14"
+                font-family="sans-serif"
+                fill="#333"
+            >Sweet Home</text>
+
+            <!-- Coordinate grid (every 50px) to help read the positions -->
+            <defs>
+              <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="black" stroke-opacity="0.3" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="400" height="250" fill="url(#grid)"/> 
+           
+        <!-- Annotations -->
+        <g id="annotations" font-family="sans-serif" font-size="4.5">
+
+           <!-- Dots and leader lines -->
+            <g fill="red" stroke="red" stroke-width="0.4">
+
+                <!-- circle: sun centre -->
+                <line x1="40" y1="12" x2="60" y2="50"/>
+                <circle cx="60" cy="50" r="1.2"/>
+
+                <!-- line: window divider -->
+                <line x1="66" y1="100" x2="132.5" y2="140"/>
+                <circle cx="132.5" cy="140" r="1.2"/>
+
+                <!-- rect: left window -->
+                <line x1="58" y1="128" x2="115" y2="140"/>
+                <circle cx="115" cy="140" r="1.2"/>
+
+                <!-- ellipse: bush centre -->
+                <line x1="42" y1="229" x2="120" y2="228"/>
+                <circle cx="120" cy="228" r="1.2"/>
+
+                <!-- polygon: roof corners -->
+                <line x1="292" y1="100" x2="280" y2="115"/>
+                <circle cx="80" cy="115" r="1.2"/>
+                <circle cx="180" cy="35" r="1.2"/>
+                <circle cx="280" cy="115" r="1.2"/>
+
+                <!-- polyline: smoke points -->
+                <circle cx="222" cy="35" r="1.2"/>
+                <circle cx="230" cy="25" r="1.2"/>
+                <circle cx="222" cy="15" r="1.2"/>
+                <circle cx="230" cy="5" r="1.2"/>
+
+                <!-- path: start and end of the garden path -->
+                <line x1="248" y1="239" x2="160" y2="230"/>
+                <line x1="248" y1="243" x2="240" y2="250"/>
+                <circle cx="160" cy="230" r="1.2"/>
+                <circle cx="240" cy="250" r="1.2"/>
+
+                <!-- text: start of the baseline -->
+                <line x1="300" y1="13" x2="300" y2="30"/>
+                <circle cx="300" cy="30" r="1.2"/>
+            </g>
+
+        <!-- Labels (white outline so they are readable on the grass) -->
+            <g fill="#B00020" stroke="white" stroke-width="1.2" stroke-linejoin="round" paint-order="stroke">
+                <text x="3" y="10">circle: cx=60, cy=50, r=25</text>
+
+                <text x="5" y="84">line (inside &lt;g&gt;):
+                  <tspan x="5" dy="6">x1=17.5, y1=0</tspan>
+                  <tspan x="5" dy="6">x2=17.5, y2=35</tspan>
+                  <tspan x="5" dy="6">= (132.5,140)-(132.5,175)</tspan>
+                </text>
+
+                <text x="5" y="112">rect (inside &lt;g&gt;):
+                  <tspan x="5" dy="6">x=0, y=0</tspan>
+                  <tspan x="5" dy="6">+ translate(115, 140)</tspan>
+                  <tspan x="5" dy="6">= (115, 140)</tspan>
+                </text>
+
+                <text x="5" y="222">ellipse:
+                  <tspan x="5" dy="6">cx=120, cy=228</tspan>
+                  <tspan x="5" dy="6">rx=18, ry=10</tspan>
+                </text>
+
+                <text x="290" y="92">polygon:
+                  <tspan x="290" dy="6">80,115 180,35 280,115</tspan>
+                </text>
+
+                <text x="238" y="12">polyline:
+                  <tspan x="238" dy="6">222,35 230,25</tspan>
+                  <tspan x="238" dy="6">222,15 230,5</tspan>
+                </text>
+
+                <text x="250" y="240">path: M160,230
+                  <tspan x="250" dy="6">... to 240,250</tspan>
+                </text>
+
+                <text x="300" y="12">text: x=300, y=30</text>
+            </g>
+        </g>
+
+        </svg>
+
+        <h2>Coordinates of each shape</h2>
+        <img src="images/annotated-shapes.jpg"
+             alt="The house picture with the code coordinates of each shape marked on it"
+             width="900">
+
+        <h2>The SVG in the DOM</h2>
+        <img src="images/svg-and-dom.jpg"
+             alt="The house picture next to the browser DOM tree showing the svg and the windows group"
+             width="900">
+    </main>
+</body>
+</html>
